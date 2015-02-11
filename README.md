@@ -17,16 +17,20 @@ To add a theme to the installer must perform the following steps:
 * Highlighted Primary Color of Theme
 
 ####Change The name of application
+```
 <string name = "nameApplication"> Piller </ string>
 <string name = "app_name"> Piller </ string>
+```
 
 ####Customize Toolbar and colors refers to the file Color.xml as:
+```
 <color name = "ColorPrimary"> # 2d5d82 </ color> ToolBar
 <color name = "colorPrimaryDark"> # 21425d </ color> StatusBar
 <color name = "colorAccent"> # 01bcd5 </ color> AccentColor
+```
 
 To insert the image of the subject that will appear in the installation window should change some lines of code (look for "Change it for image Theme"):
-
+```
 switch (auxTheme.theme_name) {
 houses "Lin": // Replace Lin with your Theme Name
 res = R.drawable.imm; // Replace imm with your image name
@@ -34,6 +38,7 @@ break;
 houses "Daa": // Replace Lin with your Theme Name
 res = R.drawable.imm2; // Replace imm with your image name
 }
+```
 
 Also provided are also files that relate to the themes and images placeholder icon, these files can be opened with illustrator,**Located in Graphics Folder**
 
