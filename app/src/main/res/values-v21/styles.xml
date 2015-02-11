@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="App2Theme" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDarkGroovie</item>
+        <item name="android:colorPrimary">@color/colorPrimaryGroovie</item>
+        <item name="android:colorAccent">@color/colorPrimaryAccentGroovie</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryGroovie</item>
+    </style>
+
+    <style name="styleTheme" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDarkGroovie</item>
+        <item name="android:colorPrimary">@color/colorPrimaryGroovie</item>
+        <item name="android:colorAccent">@color/colorPrimaryAccentGroovie</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryGroovie</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:colorControlHighlight">@color/colorHighlight</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+
+    </style>
+</resources>

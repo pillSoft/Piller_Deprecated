@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/menu_rate" android:title="@string/menu_rate"
+    />
+    <item android:id="@+id/menu_share" android:title="@string/menu_share"
+        />
+    <item android:id="@+id/community" android:title="@string/menu_ta_community"
+        />
+    <item android:id="@+id/menu_developer" android:title="@string/menu_developer"
+        />
+    <item android:id="@+id/menu_mail" android:title="@string/menu_mail"
+        />
+</menu>

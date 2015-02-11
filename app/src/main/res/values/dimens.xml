@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="textSize">24sp</dimen>
+    <dimen name="informationThemeSize">16sp</dimen>
+    <dimen name="themeActivitySizeName">23dp</dimen>
+    <dimen name="toolBarTextSize">23dp</dimen>
+    <dimen name="marginCardDimension">8dp</dimen>
+    <dimen name="paddinContentCardDimension">16dp</dimen>
+    <dimen name="toolbarHeight">?attr/actionBarSize</dimen>
+    <dimen name="app_bar_top_padding">24dp</dimen>
+</resources>
