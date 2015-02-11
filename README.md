@@ -17,10 +17,10 @@ To add a theme to the installer must perform the following steps:
 * Highlighted Primary Color of Theme
 
 ####Add your Application public key in EasyLicenseChecker.java , Get it on Developer Console
-```private static final String BASE64_PUBLIC_KEY = "REPLACE THIS WITH YOUR PUBLIC KEY";```
+`private static final String BASE64_PUBLIC_KEY = "REPLACE THIS WITH YOUR PUBLIC KEY";`
 
 ####For disable license checker comment this line in MainActivity.java , For default is Enabled
-```mLicenseChecker.start();```
+`mLicenseChecker.start();`
 
 ####Change The name of application
 ```
