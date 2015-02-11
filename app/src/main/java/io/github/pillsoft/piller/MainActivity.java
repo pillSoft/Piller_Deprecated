@@ -72,7 +72,7 @@ public class MainActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
         //Check
         mLicenseChecker = new EasyLicenseChecker(this, new Handler());
-        //mLicenseChecker.start();
+        mLicenseChecker.start();
 
         ThemeList = new ArrayList<Theme>();
         ThemeNames = getResources().getStringArray(R.array.theme_names);

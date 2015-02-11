@@ -16,6 +16,10 @@ To add a theme to the installer must perform the following steps:
 * Primary Accent Color of Theme
 * Highlighted Primary Color of Theme
 
+####Add your Application public key ( Get it on Developer Console ) 
+```private static final String BASE64_PUBLIC_KEY = "REPLACE THIS WITH YOUR PUBLIC KEY";```
+
+
 ####Change The name of application
 ```
 <string name = "nameApplication"> Piller </ string>
