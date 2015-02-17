@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="App2Theme" parent="android:Theme.Material.Light">
-        <item name="android:colorPrimaryDark">@color/colorPrimaryDarkGroovie</item>
-        <item name="android:colorPrimary">@color/colorPrimaryGroovie</item>
-        <item name="android:colorAccent">@color/colorPrimaryAccentGroovie</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="android:navigationBarColor">@color/colorPrimaryGroovie</item>
-    </style>
-
-    <style name="styleTheme" parent="android:Theme.Material.Light">
-        <item name="android:colorPrimaryDark">@color/colorPrimaryDarkGroovie</item>
-        <item name="android:colorPrimary">@color/colorPrimaryGroovie</item>
-        <item name="android:colorAccent">@color/colorPrimaryAccentGroovie</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="android:navigationBarColor">@color/colorPrimaryGroovie</item>
-    </style>
-
-    <style name="AppTheme" parent="AppTheme.Base">
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:colorPrimary">@color/colorPrimary</item>
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -27,6 +9,23 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:colorControlHighlight">@color/colorHighlight</item>
         <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+    </style>
 
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorHighlight</item> 
+        <item name="android:colorControlHighlight">@color/colorHighlight</item> 
+        <item name="colorAccent">@color/colorPrimaryAccentGroovie</item>
+        <item name="selectableItemBackground">@drawable/selectable_item_background</item>
+        <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 </resources>

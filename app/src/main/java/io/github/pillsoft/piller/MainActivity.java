@@ -25,7 +25,6 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -61,18 +60,18 @@ public class MainActivity extends ActionBarActivity {
     //Theme currentTheme;
     private String copyDirTheme;
     private RecyclerView mRecyclerView;
-    private IntentActionAdapter mAdapter;
+    private ThemeAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         copyDirTheme = Environment.getExternalStorageDirectory() + "/Themes/Data";
-        Toolbar toolbar = (Toolbar) findViewById(R.id.include);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.include);
         setSupportActionBar(toolbar);
         //Check
-        mLicenseChecker = new EasyLicenseChecker(this, new Handler());
-        mLicenseChecker.start();
+        //mLicenseChecker = new EasyLicenseChecker(this, new Handler());
+        //mLicenseChecker.start();
 
         ThemeList = new ArrayList<Theme>();
         ThemeNames = getResources().getStringArray(R.array.theme_names);
@@ -89,7 +88,7 @@ public class MainActivity extends ActionBarActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        mAdapter = new IntentActionAdapter(IntentActivityManager.getInstance().getCountries(), R.layout.card_view, this);
+        mAdapter = new ThemeAdapter(ThemeManager.getInstance().getListTheme(), R.layout.card_view, this);
         mRecyclerView.setAdapter(mAdapter);
 
     }

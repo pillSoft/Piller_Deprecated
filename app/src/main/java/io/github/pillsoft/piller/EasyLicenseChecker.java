@@ -19,10 +19,10 @@ import com.google.android.vending.licensing.ServerManagedPolicy;
 
 public class EasyLicenseChecker {
     //TODO: Put your app license key.
-    private static final String BASE64_PUBLIC_KEY = "REPLACE THIS WITH YOUR PUBLIC KEY";
+    private static final String BASE64_PUBLIC_KEY = "";
     //TODO: Generate your own 20 random bytes, and put them here.
     private static final byte[] SALT = new byte[]{
-            -48 , 1, 78, -118, -113, -3, 6, -64, 51,69, -95, -45, 77, -67, -92, -113, -10, 91,
+            -48 , 1, 78, -118, -113, -3, 6, -66, 91,69, -95, -45, 87, -67, -92, -113, -10, 91,
             -66, 77
     };
 
