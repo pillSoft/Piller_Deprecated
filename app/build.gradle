@@ -7,8 +7,8 @@ android {
         applicationId 'io.github.pillsoft.piller'
         minSdkVersion 21
         targetSdkVersion 21
-        versionCode 3
-        versionName "1.03b"
+        versionCode 4
+        versionName "1.04b"
     }
     buildTypes {
         release {

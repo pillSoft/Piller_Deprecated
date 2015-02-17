@@ -25,6 +25,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -70,8 +71,8 @@ public class MainActivity extends ActionBarActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.include);
         setSupportActionBar(toolbar);
         //Check
-        //mLicenseChecker = new EasyLicenseChecker(this, new Handler());
-        //mLicenseChecker.start();
+        mLicenseChecker = new EasyLicenseChecker(this, new Handler());
+        mLicenseChecker.start();
 
         ThemeList = new ArrayList<Theme>();
         ThemeNames = getResources().getStringArray(R.array.theme_names);
@@ -126,11 +127,11 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_rate) {
-            Rate("https://play.google.com/store/apps/details?id=" +getApplicationContext().getPackageName());
+            Rate("https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
             Toast.makeText(getApplicationContext(), this.getResources().getString(R.string.rate_thanks), Toast.LENGTH_SHORT).show();
         }
         if (id == R.id.menu_share) {
-            Share("https://play.google.com/store/apps/details?id=" +getApplicationContext().getPackageName());
+            Share("https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
         }
         if (id == R.id.menu_developer) {
             Link(this.getResources().getString(R.string.developer_site));
@@ -148,22 +149,25 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void Share(String playStoreLink){
+    public void Share(String playStoreLink) {
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, playStoreLink);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
     }
-    public void Rate(String playStoreLink){
+
+    public void Rate(String playStoreLink) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreLink));
         startActivity(browserIntent);
     }
-    public void Mail(String themeName, String email){
-        Intent mailIntent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + email));
+
+    public void Mail(String themeName, String email) {
+        Intent mailIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + email));
         mailIntent.putExtra(Intent.EXTRA_SUBJECT, themeName);
         startActivity(mailIntent);
     }
-    public void Link(String link){
+
+    public void Link(String link) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
         startActivity(browserIntent);
     }
@@ -214,7 +218,7 @@ public class MainActivity extends ActionBarActivity {
         intent.putExtra("ThemeArray", auxTheme.getArrayListTheme());
         int res = 0;
         //Change it for image theme
-        switch(auxTheme.theme_name){//Define the image to see in ThemeActivity
+        switch (auxTheme.theme_name) {//Define the image to see in ThemeActivity
             case "Lin":
                 res = R.drawable.imm;
                 break;
