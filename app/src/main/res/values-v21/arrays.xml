@@ -8,8 +8,8 @@
 
     <!--Theme Packages go here-->
     <string-array name="theme_packages">
-        <item>io.github.remeic.LinTheme</item>
-        <item>io.github.remeic.Daa</item>
+        <item>com.example.theme1</item>
+        <item>com.example.theme2</item>
     </string-array>
 
     <!--Theme Motto go here-->
