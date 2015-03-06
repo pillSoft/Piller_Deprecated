@@ -26,6 +26,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -38,6 +40,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -57,7 +60,7 @@ public class ThemeActivity extends ActionBarActivity {
     String ThemeAccentColor;
     String ThemeHighlightColor;
     String FileName;
-    Button installButton;
+    ImageButton installButton;
     ImageView image;
 
 
@@ -94,23 +97,31 @@ public class ThemeActivity extends ActionBarActivity {
 
 
         FileName = ThemeName + ".apk";
-        installButton = (Button) findViewById(R.id.install_button);
-        installButton.setBackgroundColor(Color.parseColor(ThemeHighlightColor));
+
+
+        installButton = (ImageButton) findViewById(R.id.fab);
+
+        Drawable fabBackground=getResources().getDrawable(R.drawable.fab_background);
+        fabBackground.setColorFilter(Color.parseColor(ThemeHighlightColor), PorterDuff.Mode.ADD);
+
+        installButton.setBackground(fabBackground);
+       // installButton.setImageDrawable(getResources().getDrawable(R.drawable.plus));
+
 
         if (PackageInstalled(ThemePackage)) {
-            //InstallButton.setVisibility(View.GONE);
-            installButton.setVisibility(View.VISIBLE);
+            installButton.setClickable(true);
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.minus));
             installButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    OpenThemeInSettings(ThemePackage);
+
+                    Uninstall(ThemePackage);
                 }
             });
 
         } else {
-            installButton.setVisibility(View.VISIBLE);
             installButton.setClickable(true);
-            installButton.setText("Install " + ThemeName);
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.plus));
             installButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -124,13 +135,20 @@ public class ThemeActivity extends ActionBarActivity {
     public void onResume() {
         super.onResume();
         if (PackageInstalled(ThemePackage)) {
-            //InstallButton.setVisibility(View.GONE);//hide the installation button
-            installButton.setText(ThemeName+" " + getResources().getString(R.string.alreadyInstalled));
             //clean of the /Themes/ folder
+            installButton.setClickable(true);
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.minus));
+            installButton.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
+
+                         Uninstall(ThemePackage);
+                     }
+                 });
             delete(new File(Environment.getExternalStorageDirectory() + "/Themes/"));
         } else {
-            installButton.setVisibility(View.VISIBLE);
-            installButton.setText("Install " + ThemeName);
+            installButton.setClickable(true);
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.plus));
             installButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -186,14 +204,14 @@ public class ThemeActivity extends ActionBarActivity {
         }
         return true;
     }
-
+/*
     public void OpenThemeInSettings(String target_package) {
         Intent intent = new Intent("android.intent.action.MAIN");
         intent.putExtra("pkgName", target_package);
         intent.setComponent(new ComponentName("org.cyanogenmod.theme.chooser", "org.cyanogenmod.theme.chooser.ChooserActivity"));
         startActivity(intent);
     }
-    /* NEXT UPATE
+*/
     public void Uninstall(String targetPackage) {
         Uri packageUri = Uri.parse("package:" + targetPackage);
         Intent uninstallIntent = new Intent(Intent.ACTION_DELETE,
@@ -201,13 +219,6 @@ public class ThemeActivity extends ActionBarActivity {
         startActivity(uninstallIntent);
     }
 
-    public void CopyToClipBoard(String label, String text) {
-        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText(label, text);
-        clipboard.setPrimaryClip(clip);
-        Toast.makeText(getApplicationContext(), label + " copied to clipboard", Toast.LENGTH_SHORT).show();
-    }
-*/
     private void copyFile(InputStream in, OutputStream out) throws IOException {
         byte[] buffer = new byte[1024];
         int read;

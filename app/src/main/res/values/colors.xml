@@ -16,4 +16,5 @@
     <color name="colorPrimaryDarkGroovie">#ffF57C00</color>
     <color name="colorPrimaryAccentGroovie">#FF9800</color>
     <color name="colorHighlight">#ffe91e63</color>
+    <color name="colorTrasparent">#00000000</color>
 </resources>
