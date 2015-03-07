@@ -11,10 +11,12 @@
     <color name="backgroundLayoutInstall">#4caf50</color>
     <color name="primary_Lin">#009688</color>
     <color name="primaryDark_Lin">#00796b</color>
-    <color name="white">#ffffffff</color>
+    <color name="white">@android:color/white</color>
     <color name="colorPrimaryGroovie">#ffFF9800</color>
     <color name="colorPrimaryDarkGroovie">#ffF57C00</color>
     <color name="colorPrimaryAccentGroovie">#FF9800</color>
     <color name="colorHighlight">#ffe91e63</color>
     <color name="colorTrasparent">#00000000</color>
+    <color name="colorIconFab">@android:color/white</color>
+
 </resources>

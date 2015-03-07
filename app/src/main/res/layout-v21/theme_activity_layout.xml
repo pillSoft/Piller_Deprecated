@@ -17,7 +17,9 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="0dp"
         android:layout_below="@+id/include2"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
 
     <ImageButton
         android:id="@+id/fab"

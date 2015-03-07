@@ -10,4 +10,6 @@
     <dimen name="paddinContentCardDimension">16dp</dimen>
     <dimen name="toolbarHeight">?attr/actionBarSize</dimen>
     <dimen name="app_bar_top_padding">24dp</dimen>
+    <dimen name="fab_dimension">56dp</dimen>
+    <dimen name="fab_icon_dimension">24dp</dimen>
 </resources>
