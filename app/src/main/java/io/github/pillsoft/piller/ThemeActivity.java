@@ -189,9 +189,14 @@ public class ThemeActivity extends ActionBarActivity {
     }
 
     void delete(File file) {
+
         if (file.isDirectory())
-            for (String child : file.list())
-                delete(new File(file, child));
+            for (File child : file.listFiles()){
+                File to = new File(file.getAbsolutePath() + System.currentTimeMillis());
+                child.renameTo(to);
+                delete(child);
+            }
+
         file.delete();  // delete child file or empty directory
     }
 
