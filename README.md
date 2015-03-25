@@ -4,10 +4,13 @@ First commit for Piller,a Cyanogenmod Theme Installer for Lollipop
 Piller is an installer of themes, open source (GPL license), developed by pillSoft ([Giulio Fagioli](http://goo.gl/eBEyMb) e [Lorenzo Salani](http://goo.gl/zARfDu) ).
 This Theme installer uses a library provided by [Ishida](https://github.com/ishida/android-easy-lvl) to control the playstore license, uses pieces of code provided by [Rahul K Dinesh](https://github.com/b16h22/Theme-Installer), for the installation of the themes.
 
+####Tutorial Step by Step:
+[XDA](http://forum.xda-developers.com/showpost.php?p=59672314&postcount=15)
+
 ####For users:
 To add a theme to the installer must perform the following steps:
 - Addition of the theme in assets / files, the name of 'apk must be formed only by the name of the theme **Important**.
-- Inclusion of information on the topic in the file arrays.xml this includes:
+- Changing the information of the theme in the file arrays.xml this includes:
 * Theme Name
 * Package Theme
 * Motto of the theme
@@ -38,10 +41,10 @@ To add a theme to the installer must perform the following steps:
 To insert the image of the subject that will appear in the installation window should change some lines of code (look for "Change it for image Theme"):
 ```
 switch (auxTheme.theme_name) {
-houses "Lin": // Replace Lin with your Theme Name
+case "Lin": // Replace Lin with your Theme Name
 res = R.drawable.imm; // Replace imm with your image name
 break;
-houses "Daa": // Replace Lin with your Theme Name
+case "Daa": // Replace Lin with your Theme Name
 res = R.drawable.imm2; // Replace imm with your image name
 }
 ```
