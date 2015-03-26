@@ -24,6 +24,9 @@
     <string name="buy_button">Buy</string>
     <string name="Check">Check</string>
 
+    <!-- String for Mail developer -->
+    <string name="email_address">fagioli.giulio@gmail.com</string>
+
     <!-- Menù -->
     <string name="menu_rate">Rate</string>
     <string name="menu_share">Share</string>
