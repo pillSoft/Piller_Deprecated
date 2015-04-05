@@ -14,7 +14,10 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:isGame="true"
+        >
         <activity
             android:name="io.github.pillsoft.piller.MainActivity"
             android:label="@string/app_name" >

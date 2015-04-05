@@ -3,33 +3,24 @@
 
     <string name="current_version">1.0</string>
     <string name="app_name">Piller</string>
-    <string name="nameApplication">Piller</string>
-    <string name="check">Controlla</string>
+
+    <!-- Stringhe per il collegate al controllo della licenza -->
     <string name="restartAppError">Errore durante il controllo della licenza. Si prega di riavviare l\' applicazione tra qualche secondo.</string>
     <string name="verifyLicense">Verifica della licenza...</string>
+    <string name="unlicensed_dialog_retry_body">Riprova</string>
+    <string name="unlicensed_dialog_title">Ops &#8230;</string>
+    <string name="unlicensed_dialog_body">Pare che questa vesione non sia stata scaricata dal playstore , considera di comprare il tema, i giovani sviluppatori andrebbero supportati , Tutti!</string>
+    <string name="dont_allow">L \' installazione non è permessa, pare che questa versione dell\' app non sia stata scaricata dal playstore.</string>
 
     <!-- Next Update -->
     <string name="delete_title">Disistalla il Tema</string>
     <string name="color_pick">Prendi il colore</string>
-    <string name="unlicensed_dialog_retry_body">Riprova</string>
-    <string name="unlicensed_dialog_title">Ops &#8230;</string>
-    <string name="unlicensed_dialog_body">Pare che questa vesione non sia stata scaricata dal playstore , considera di comprare il tema, i giovani sviluppatori andrebbero supportati , Tutti!</string>
-    <string name="retry_button">Riprova</string>
-    <string name="quit_button">Esci</string>
-    <string name="checking_license">Controlla la licenza</string>
-    <string name="dont_allow">L \' installazione non è permessa, pare che questa versione dell\' app non sia stata scaricata dal playstore.</string>
-    <string name="buy_button">Compra</string>
-    <string name="Check">Controlla</string>
 
     <!-- String for Menu -->
     <string name="menu_rate">Valuta</string>
     <string name="menu_share">Condividi</string>
     <string name="menu_developer">Sviluppatore</string>
-    <string name="developer_site">https://plus.google.com/u/0/113213125679066366328/posts</string>
     <string name="rate_thanks">Grazie di aver valutato , mi hai aiutato molto!</string>
-<!-- String for Mail developer -->
-    <string name="application_error">Errore</string>
-    <string name="email_address">fagioli.giulio@gmail.com</string>
 
     <!-- Theme Activity -->
     <string name="default_string_installbutton">Installa il Tema</string>

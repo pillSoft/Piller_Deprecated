@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Color for Toolbar , Statusbar , NavigationBar and Accent -->
     <color name="colorPrimary">#2d5d82</color>
     <color name="colorPrimaryDark">#21425d</color>
     <color name="colorAccent">#01bcd5</color>
-    <color name="colorText">#ffffffff</color>
-    <color name="colorTextCard">@color/colorText</color>
-    <color name="bgColorLinFirst">#ff009688</color>
-    <color name="bgColorNext">#ff673ab7</color>
-    <color name="background">#eceff1</color>
-    <color name="backgroundLayoutInstall">#4caf50</color>
-    <color name="primary_Lin">#009688</color>
-    <color name="primaryDark_Lin">#00796b</color>
-    <color name="white">@android:color/white</color>
-    <color name="colorPrimaryGroovie">#ffFF9800</color>
-    <color name="colorPrimaryDarkGroovie">#ffF57C00</color>
-    <color name="colorPrimaryAccentGroovie">#FF9800</color>
     <color name="colorHighlight">#ffe91e63</color>
+    <!-- Color of Text MainActivity -->
+    <color name="colorText">@color/white</color>
+    <!-- Color of Text Card  -->
+    <color name="colorTextCard">@color/colorText</color>
+    <!-- Various Colors -->
+    <color name="white">@android:color/white</color>
     <color name="colorTrasparent">#00000000</color>
-    <color name="colorIconFab">@android:color/white</color>
+    <!-- Color for image on fab -->
+    <color name="colorIconFab">@color/white</color>
+    <!-- Color for background MainActivity -->
+    <color name="backgroundListTheme">@color/white</color>
 
 </resources>

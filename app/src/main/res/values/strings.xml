@@ -4,38 +4,36 @@
     <string name="app_name">Piller</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="nameApplication">Piller</string>
+
 
     <!-- Check License -->
-    <string name="check">Check</string>
-    <string name="application_error">Error</string>
     <string name="restartAppError">Error occurred while verifying license. Please restart the application after a while.</string>
     <string name="verifyLicense">Verifying License...</string>
-    <!-- Next Update -->
-    <string name="delete_title">Uninstall Theme</string>
-    <string name="color_pick">Pick Theme Color</string>
     <string name="unlicensed_dialog_retry_body">Retry</string>
     <string name="unlicensed_dialog_title">Ops &#8230;</string>
     <string name="unlicensed_dialog_body">It seems that this version has not been downloaded from the play store, consider buying the theme, the young developers should be supported, All</string>
-    <string name="retry_button">Retry</string>
-    <string name="quit_button">Quit</string>
-    <string name="checking_license">Checking for License</string>
     <string name="dont_allow">The installation of the subjects was not allowed, it seems that this version has been downloaded from playstore</string>
-    <string name="buy_button">Buy</string>
-    <string name="Check">Check</string>
 
-    <!-- String for Mail developer -->
-    <string name="email_address">fagioli.giulio@gmail.com</string>
+    <!-- Next Update -->
+    <string name="delete_title">Uninstall Theme</string>
+    <string name="color_pick">Pick Theme Color</string>
 
     <!-- Menù -->
     <string name="menu_rate">Rate</string>
     <string name="menu_share">Share</string>
-    <string name="menu_developer">Developer</string>
-    <string name="developer_site">https://plus.google.com/u/0/113213125679066366328/posts</string>
     <string name="rate_thanks">Thanks for rate , you help me!</string>
     <string name="menu_mail">Mail</string>
+    <string name="menu_developer">Developer</string>
     <string name="community_link">https://plus.google.com/u/0/communities/110443044106258058954</string>
     <string name="menu_ta_community">Community</string>
+    <string name="developer_site">https://plus.google.com/u/0/113213125679066366328/posts</string>
+
+
+    <!-- String for Mail developer -->
+    <string name="email_address">fagioli.giulio@gmail.com</string>
+    <string name="application_error">Error</string>
+
+
 
     <!-- Theme Activity -->
     <string name="default_string_installbutton">Install Theme</string>
