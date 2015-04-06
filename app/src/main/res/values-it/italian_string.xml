@@ -3,6 +3,7 @@
 
     <string name="current_version">1.0</string>
     <string name="app_name">Piller</string>
+    <string name="application_error">Errore</string>
 
     <!-- Stringhe per il collegate al controllo della licenza -->
     <string name="restartAppError">Errore durante il controllo della licenza. Si prega di riavviare l\' applicazione tra qualche secondo.</string>

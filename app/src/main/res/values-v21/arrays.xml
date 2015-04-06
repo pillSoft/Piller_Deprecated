@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Theme Names go here-->
-    <string-array name="theme_names">
+    <string-array name="theme_names"  translatable="false" >
         <item>Lin</item>
         <item>Daa</item>
     </string-array>
 
     <!--Theme Packages go here-->
-    <string-array name="theme_packages">
+    <string-array name="theme_packages"  translatable="false">
         <item>com.example.theme1</item>
         <item>com.example.theme2</item>
     </string-array>
 
     <!--Theme Motto go here-->
-    <string-array name="theme_motto">
+    <string-array name="theme_motto"  translatable="false">
         <item>Leak, Coming Soon, Follow me</item>
         <item>Not now, Fake, Maybe</item>
     </string-array>
 
     <!--Theme Primary Colors go here-->
-    <string-array name="theme_colors">
+    <string-array name="theme_colors"  translatable="false">
         <item>#009688</item>
         <item>#f44336</item>
     </string-array>
 
     <!--Theme Primary Dark Colors go here-->
-    <string-array name="theme_darkcolors">
+    <string-array name="theme_darkcolors"  translatable="false">
         <item>#00796b</item>
         <item>#d32f2f</item>
     </string-array>
 
     <!--Theme Accent Colors go here-->
-    <string-array name="theme_accentcolors">
+    <string-array name="theme_accentcolors"  translatable="false">
         <item>#004d40</item>
         <item>#536DFE</item>
     </string-array>
 
     <!--Theme highlighted Colors go here-->
-    <string-array name="theme_highlightedcolors">
+    <string-array name="theme_highlightedcolors"  translatable="false">
         <item>#4CAF50</item>
         <item>#448AFF</item>
     </string-array>
