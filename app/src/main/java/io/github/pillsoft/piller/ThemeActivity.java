@@ -21,11 +21,15 @@ package io.github.pillsoft.piller;
 
 import android.app.AlertDialog;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -34,6 +38,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,6 +47,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.io.File;
@@ -82,11 +88,11 @@ public class ThemeActivity extends ActionBarActivity {
             ThemeAccentColor = ThemeArray[4];
             ThemeHighlightColor = ThemeArray[5];
             ThemeMotto = ThemeArray[6];
-            int i = intent.getIntExtra("ImageResurces",0);
+            /*int i = intent.getIntExtra("ImageResurces",0);
             System.out.println(i);
 
             image = (ImageView) findViewById(R.id.imageView);
-            image.setImageDrawable(getResources().getDrawable(i));
+            image.setImageDrawable(getResources().getDrawable(i));*/
         }
 
         Window window = this.getWindow();
@@ -128,6 +134,24 @@ public class ThemeActivity extends ActionBarActivity {
                     showDialog();
                 }
             });
+        }
+
+        AssetManager am = getAssets();
+        InputStream inputStream = null;
+        LinearLayout myGallery=(LinearLayout) findViewById(R.id.gallery_image);
+
+        try {
+
+            for (int i = 1; i < am.list("Images/" + ThemeName).length; i++) {
+                inputStream = am.open("Images/" + ThemeName + "/" + ThemeName + i + ".png");//ThemeName is the name present in theme_names arrays
+                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                ImageView photo = new ImageView(this);
+                photo.setScaleType(ImageView.ScaleType.FIT_XY);
+                photo.setImageBitmap(bitmap);
+                myGallery.addView(photo);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

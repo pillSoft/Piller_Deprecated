@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
+        android:background="@color/backgroundListTheme"
         android:id="@+id/linearFirstTheme"
         android:layout_alignParentEnd="false"
         android:weightSum="100"
