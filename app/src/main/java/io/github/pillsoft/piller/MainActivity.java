@@ -216,16 +216,6 @@ public class MainActivity extends ActionBarActivity {
         auxTheme = ThemeList.get(index);
         Intent intent = new Intent(MainActivity.this, ThemeActivity.class);
         intent.putExtra("ThemeArray", auxTheme.getArrayListTheme());
-        int res = 0;
-        //Change it for image theme
-        switch (auxTheme.theme_name) {//Define the image to see in ThemeActivity
-            case "Lin":
-                res = R.drawable.imm;
-                break;
-            case "Daa":
-                res = R.drawable.imm2;
-        }
-        intent.putExtra("ImageResurces", res);
         startActivity(intent);
 
     }

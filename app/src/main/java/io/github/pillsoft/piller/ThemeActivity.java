@@ -67,8 +67,6 @@ public class ThemeActivity extends ActionBarActivity {
     String ThemeHighlightColor;
     String FileName;
     ImageButton installButton;
-    ImageView image;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,11 +86,6 @@ public class ThemeActivity extends ActionBarActivity {
             ThemeAccentColor = ThemeArray[4];
             ThemeHighlightColor = ThemeArray[5];
             ThemeMotto = ThemeArray[6];
-            /*int i = intent.getIntExtra("ImageResurces",0);
-            System.out.println(i);
-
-            image = (ImageView) findViewById(R.id.imageView);
-            image.setImageDrawable(getResources().getDrawable(i));*/
         }
 
         Window window = this.getWindow();
@@ -141,9 +134,9 @@ public class ThemeActivity extends ActionBarActivity {
         LinearLayout myGallery=(LinearLayout) findViewById(R.id.gallery_image);
 
         try {
-
-            for (int i = 1; i < am.list("Images/" + ThemeName).length; i++) {
-                inputStream = am.open("Images/" + ThemeName + "/" + ThemeName + i + ".png");//ThemeName is the name present in theme_names arrays
+            String themes []  = am.list("Images/" + ThemeName);//Names of all the images in Images/yourtheme folder
+            for (int i = 0; i < themes.length; i++) {
+                inputStream = am.open("Images/" + ThemeName + "/" + themes[i] );//ThemeName is the name present in theme_names arrays
                 Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
                 ImageView photo = new ImageView(this);
                 photo.setScaleType(ImageView.ScaleType.FIT_XY);
