@@ -2,8 +2,7 @@
 <resources>
     <string name="current_version">1.0</string>
     <string name="app_name">Piller</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings"  translatable="false">Settings</string>
 
 
     <!-- Check License -->

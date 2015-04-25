@@ -38,16 +38,8 @@ To add a theme to the installer must perform the following steps:
 <color name = "colorAccent"> # 01bcd5 </ color> AccentColor
 ```
 
-To insert the image of the subject that will appear in the installation window should change some lines of code (look for "Change it for image Theme"):
-```
-switch (auxTheme.theme_name) {
-case "Lin": // Replace Lin with your Theme Name
-res = R.drawable.imm; // Replace imm with your image name
-break;
-case "Daa": // Replace Lin with your Theme Name
-res = R.drawable.imm2; // Replace imm with your image name
-}
-```
+###For add preview images
+In the resources of the project, in the Assets folder, you must create as many folders as there are themes included in piller, each of these folders has the same name of the theme to which it refers, in all of them are contained preview images of the theme, there are no restrictions on the number and their name.
 
 Also provided are also files that relate to the themes and images placeholder icon, these files can be opened with illustrator,**Located in Graphics Folder**
 
