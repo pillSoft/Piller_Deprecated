@@ -1,6 +1,9 @@
 # Piller
 First commit for Piller,a Cyanogenmod Theme Installer for Lollipop
 
+###Deprecated:
+There were problems with google, evidently going to break some rules, the apk not contain inside them other apk, we have developed another version of the project that should solve this problem
+
 Piller is an installer of themes, open source (GPL license), developed by pillSoft ([Giulio Fagioli](http://goo.gl/eBEyMb) e [Lorenzo Salani](http://goo.gl/zARfDu) ).
 This Theme installer uses a library provided by [Ishida](https://github.com/ishida/android-easy-lvl) to control the playstore license, uses pieces of code provided by [Rahul K Dinesh](https://github.com/b16h22/Theme-Installer), for the installation of the themes.
 
