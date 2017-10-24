@@ -36,7 +36,7 @@ To add a theme to the installer must perform the following steps:
 
 ####Customize Toolbar and colors refers to the file Color.xml as:
 ```
-<color name = "ColorPrimary"> # 2d5d82 </ color> ToolBar
+<color name = "ColorPrimary"> "REPLACE THIS WITH YOUR COLOR PRIMARY" </ color> ToolBar
 <color name = "colorPrimaryDark"> # 21425d </ color> StatusBar
 <color name = "colorAccent"> # 01bcd5 </ color> AccentColor
 ```
